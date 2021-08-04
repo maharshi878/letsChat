@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+@keyframes pulse {
+  0% {
+    background-color: #001F3F;
+  }
+  100% {
+    background-color: #FF4136;
+  }
+}
+
+.headerSignIn{
+  height: 25%;
+  animation: pulse 15s infinite;
+}
+
+.headerSignIn.text{
+ font-family: Montserrat;
+ text-align: center;
+ color: white; 
+}
+.bodySignIn.text{
+ font-family: Montserrat;
+ text-align: center;
+ color: white;
+ font-size:45px;
+}
