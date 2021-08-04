@@ -17,6 +17,9 @@
  color: white;
  font-size:45px;
 }
+signInBtn.SignIn, userName_value{
+color: black;
+}
 body{
  background-color: black;
  text-align: center;
