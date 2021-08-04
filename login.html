@@ -14,6 +14,12 @@
     <p class="bodySignIn.text">Join Let'sChat today!</p>
     <input id="userName_value" type="text" placeholder="Put your nickname here!"></input>
   <button type="submit" id="signInBtn.SignIn" onclick="addUser()">Log In</button>
-  <script src="SignInScript.js">
+  <script>
+function addUser(){
+SessionIdTemp = document.getElementById("userName")
+localStorage.setItem("SessionId", SessionIdTemp);
+window.location = "chatRoom.html";
+} 
+  </script>
   </body>
 </html>
