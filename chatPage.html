@@ -41,7 +41,7 @@ var firebaseConfig = {
     measurementId: "G-Y43X8YXMT1"
   };
   firebase.initializeApp(firebaseConfig);
-	user_name = localStorage.getItem("user_name");
+	user_name = localStorage.getItem("SessionId");
 	room_name = localStorage.getItem("room_name");
 
 function send()
@@ -66,7 +66,7 @@ getData();
 function logout() {
 localStorage.removeItem("user_name");
 localStorage.removeItem("room_name");
-window.location.replace("index.html");
+window.location.replace("login.html");
 }
 </script>
 </body>
