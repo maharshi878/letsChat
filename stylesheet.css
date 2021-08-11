@@ -30,3 +30,10 @@ body{
 color: white;
 font-family: Montserray;
 }
+.input_div_message_page
+{
+	position: fixed;
+  bottom: 0px;
+  width: 100%;
+  background: rgba(255,255,255,0.8);
+}
