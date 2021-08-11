@@ -16,7 +16,7 @@
   <button type="submit" id="signInBtn.SignIn" onclick="addUser()">Log In</button>
   <script>
 function addUser(){
-SessionIdTemp = document.getElementById("userName")
+SessionIdTemp = document.getElementById("userName").value;
 localStorage.setItem("SessionId", SessionIdTemp);
 window.location = "chatRoom.html";
 } 
