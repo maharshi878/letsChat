@@ -2,7 +2,6 @@
 <html>
 <head>
 	<title>Kwitter Room Page</title>
-<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=AAjHcGooMt5hZc9EPnHGiYXIyxm9220Dz46J3VjVtyWg5397GfGKKI_Qz0ce8n_TEBsTWtsVKFIIND1cUQFh7t7Wv_da8WmuThe1LPt-tGU" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="https://gc.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cHM6Ly9tYWhkaWhhdDc5MS5naXRodWIuaW8vdjIva3dpdHRlci9rd2l0dGVyX3Jvb20uaHRtbA"/><script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
 <script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
 
@@ -13,7 +12,90 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
-<link rel="stylesheet" type="text/css" href="style.css">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+html, body
+{
+  height: 100%;
+  margin: 0;
+}
+
+body
+{
+font-family: Montserrat;
+background-color: black;
+color: white;
+}
+
+.header
+{
+	color: white;font-family: montserrat;font-size: 45px;letter-spacing: 10px;margin-top: 80px;
+}
+.header img
+{
+	width: 80px;margin-left: -15px;
+}
+
+.room_name
+{
+	cursor: pointer;
+	font-size: 20px;
+}
+
+
+#logout
+{
+	font-size: 20px; float: right;
+}
+
+
+#output
+{
+	padding: 10px; width:80%;background: rgba(255,255,255,0.8);border-radius: 15px;
+}
+
+.input_div_room_page
+{
+	width: 80%;
+}
+
+.input_div label
+{
+	color: white;font-size: 20px;
+}
+
+
+.input_div_message_page
+{
+	position: fixed;bottom: 0px;width: 100%;background: rgba(255,255,255,0.8);
+}
+.input_div_message_page label
+{
+	color: black;
+}
+.input_div_message_page #msg
+{
+	width: 80%;
+}
+.input_div_message_page button
+{
+	margin-top: 15px;
+	width: 50%; 
+}
+.color_white
+{
+	color: white
+}
+
+.user_tick
+{
+	width:20px;
+}
+.message_h4
+{
+	padding-left:5px;color:grey;
+}
+</style>
 
 </head>
 <body>
@@ -23,25 +105,15 @@
 	<button id="logout" onclick="logout();" class="glyphicon glyphicon-log-out btn btn-danger">Logout</button>
 
 	<center>
-		<h1  class="header">	
-			Kwitter	
-			<sup>
-				<img src="m2.png">
-			</sup>
-		</h1>
+		<h1  class="header">Let'sChat room</h1>
 		<h3 id="user_name" class="color_white"></h3>
-
 		<div class="form-group input_div_room_page">
 			<label>#Add Room:</label>
 			<input type="text" id="room_name" class="form-control" placeholder="#Room Name">
 		</div>
-		
 		<button onclick="addRoom();" class="btn btn-success">#Add Room</button>
-
 		<h3 class="color_white">#TRENDINGROOMS</h3>
-
 		<div id="output"></div>
-		
 	</center>
 </div>
 
